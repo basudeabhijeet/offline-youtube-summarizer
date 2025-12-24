@@ -19,22 +19,15 @@ The goal of the project is to demonstrate the practical integration of **speech 
 ### 2.1 Prerequisites
 
 * **Operating System:** Windows
-* **Python:** 3.11.x
+* **Python:** 3.8+
 * **GPU (optional but recommended):** NVIDIA GPU with CUDA support
 * **FFmpeg:** Required for audio processing
 
 ---
 
-### 2.2 Clone the Repository
-
-```bash
-git clone <repository-url>
-cd offline-youtube-summarizer
-```
-
 ---
 
-### 2.3 Create and Activate Virtual Environment
+### 2.2 Create and Activate Virtual Environment
 
 ```bash
 py -3.11 -m venv venv311
@@ -43,7 +36,7 @@ venv311\Scripts\activate
 
 ---
 
-### 2.4 Install Python Dependencies
+### 2.3 Install Python Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -51,7 +44,7 @@ pip install -r requirements.txt
 
 ---
 
-### 2.5 Install PyTorch with CUDA Support (Recommended)
+### 2.4 Install PyTorch with CUDA Support (Recommended)
 
 ```bash
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
@@ -61,7 +54,7 @@ This enables GPU acceleration for transcription and summarization.
 
 ---
 
-### 2.6 Install FFmpeg
+### 2.5 Install FFmpeg
 
 1. Download FFmpeg from: [https://ffmpeg.org/download.html](https://ffmpeg.org/download.html)
 2. Extract it to any folder (e.g., `C:\ffmpeg`)
@@ -75,7 +68,7 @@ ffmpeg -version
 
 ---
 
-### 2.7 Model Downloads (Automatic)
+### 2.6 Model Downloads (Automatic)
 
 The following models are downloaded automatically on first run:
 
@@ -86,10 +79,10 @@ Once downloaded, the application works **offline**.
 
 ---
 
-### 2.8 Run the Application
+### 2.7 Run the Application
 
 ```bash
-python -m app.app
+python run.py
 ```
 
 Open your browser and visit:
@@ -176,7 +169,7 @@ http://127.0.0.1:5000
 
 ### 4.2 Output Files
 
-Generated files are stored in the `outputs/` directory:
+Generated files are stored in the `src/outputs/` directory:
 
 * Downloaded audio
 * Transcript text
